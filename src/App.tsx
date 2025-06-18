@@ -1,20 +1,19 @@
-import './App.css'
-import BusquedaDiferida from './useDeferredValue/BusquedaDiferida';
-import GraficoDiferido from './useDeferredValue/GraficoDiferido';
-import ContadorLetras from './useMemo/ContadorLetras';
-import ExpensiveCalc from './useMemo/ExpensiveCalc';
-import FiltroLista from './useMemo/FiltroLista';
-import PrimosMemo from './useMemo/PrimosMemo';
-import TablaOrdenada from './useMemo/TablaOrdenada';
+import { Link } from 'react-router-dom';
+import AppRoutes from './AppRoutes';
+import { ButtonCss } from './css/ButtonCss';
 
-
-function App() {
+export default function App() {
   return (
     <>
-    
-      
+      <nav style={{ display: 'flex', gap: '1rem', padding: '1rem', background: '#21262d' }}>
+        <Link to="/">Inicio</Link>
+        <Link to="/about">Acerca de</Link>
+        <Link to="/productos">Productos</Link>
+        <Link to="/contacto">Contacto</Link>
+      </nav>
+      <ButtonCss />
+
+      <AppRoutes />
     </>
   );
 }
-
-export default App;
